@@ -42,7 +42,7 @@ public class MyStrings
 	 */
 	public short[] getStringBuffer(String myString)
 	{
-		myString += "........";// 添加结束（同时保证结尾肯定为英文）
+		myString += "........";// 添加结束（同时保证结尾肯定为英文，只好这么写了。。。）
 		myString.replaceAll("\\s*", "");// 删除所有的空格
 		List<String> myStringList = getStringList(myString);
 		short[] resultBuffer = null, firstBuffer = null, secondBuffer;
@@ -93,7 +93,7 @@ public class MyStrings
 			return null;
 		}
 
-		// 英文组合
+		// 分割出英文组合（assic表中，从空格到~）
 		Pattern p = Pattern.compile("[ -~]+");
 		Matcher m = p.matcher(myStr);
 		// System.out.println("英文分段：");
@@ -101,7 +101,7 @@ public class MyStrings
 		{
 			englishList.add(m.group());
 		}
-		// 非英文组合
+		// 分割出非英文组合
 		p = Pattern.compile("[^ -~]+");
 		m = p.matcher(myStr);
 		// System.out.println();
@@ -111,7 +111,7 @@ public class MyStrings
 			chineseList.add(m.group());
 		}
 
-		int len = chineseList.size();// 中英文字符长度相同
+		int len = chineseList.size();// 中英文字符长度相同（中文开头，英文结尾）
 		for (int index = 0; index < len; index++)
 		{
 			// System.out.println();
@@ -124,7 +124,7 @@ public class MyStrings
 	}
 
 	/**
-	 * 通过控制台，按照汉字的方式两两输出英文
+	 * 测试用，通过控制台，按照汉字的方式两两输出英文
 	 * 
 	 * @param buffer
 	 */
@@ -159,7 +159,7 @@ public class MyStrings
 	}
 
 	/**
-	 * 通过控制台打印输出
+	 * 测试用，通过控制台打印输出汉字
 	 * 
 	 * @param buffer
 	 */
@@ -222,10 +222,10 @@ class EnglishString
 	}
 
 	/**
-	 * 获取字符串的字模，一个字符是8*16，两两字符拼接成16*16 奇数个字符的最后一个字符为空格，以保证输出为16*16个点阵， 即32个字节为单位
+	 * 获取字符串的字模，一个字符是8*16，两两字符拼接成16*16 奇数个字符，最后一个字符为空格，以保证输出为16*16个点阵， 即32个字节为单位
 	 * 
 	 * @param englishStrs
-	 * @return 输出时，两个8*16字符合并成一个16*16的输出（和汉字的扫描方式相同）
+	 * @return 输出时，两个8*16字符合并成一个16*16的输出（和汉字的扫描输出方式相同）
 	 */
 	public short[] getEnglishBuffer(String englishStrs)
 	{
@@ -298,6 +298,7 @@ class ChineseString
 
 	/*
 	 * 无参构造函数
+	 * 
 	 */
 	public ChineseString()
 	{

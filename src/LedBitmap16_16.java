@@ -5,9 +5,7 @@ import com.pi4j.io.spi.SpiDevice;
 import com.pi4j.io.spi.SpiFactory;
 
 /**
- * Matrix 7219 LED 显示
- * 
- * 
+ * Matrix 7219 LED 显示16*16的汉字
  * 
  * 
  */
@@ -50,6 +48,12 @@ public class LedBitmap16_16
 
 	public static void main(String[] args)
 	{
+		/*
+		 * 8块显示屏，文字采用16*16的分辨率。排列方式为： 0 1 2 3->接4的左侧
+		 * 
+		 * 4 5 6 7->右侧接MCU
+		 * 
+		 */
 		LedBitmap16_16 led = new LedBitmap16_16((short) 8);
 
 		// 打开设备
@@ -59,15 +63,6 @@ public class LedBitmap16_16
 		led.orientation(90);
 		led.showMessag_16_16(
 				"大胖 派我来巡山,121^*(^&$*^%,今年第22号台风“海马”的 中心已于21于日中午12点40分前后在广东省汕尾市海丰县鲘门镇登陆，登陆时中心附近最大风力有14级（42米/秒，强台风级），中心最低气压为960百帕。“海马”直扑广东，带来严重风雨影响。昨天上午，广东中东部、福建东南部的部分地区瞬时最大风力有8～10级，广东东部沿海地区和岛屿局地有11～14级，广东汕尾浮标站达16级（52.9米/秒）");
-		// // led.showMessag_8_8("123456");
-		// led.letter((short) 0, (short) '0');
-		// led.letter((short) 1, (short) '1');
-		// led.letter((short) 2, (short) '2');
-		// led.letter((short) 3, (short) '3');
-		// led.letter((short) 4, (short) '4');
-		// led.letter((short) 5, (short) '5');
-		// led.letter((short) 6, (short) '6');
-		// led.letter((short) 7, (short) '7');
 		try
 		{
 			System.in.read();
