@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="F:/1learning/1respberry_pi/project/6_SmartHome/Java_program/homeweather_pi4j/json.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/pi4j"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
