@@ -7,7 +7,6 @@ import com.pi4j.io.spi.SpiFactory;
 /**
  * Matrix 7219 LED ÏÔÊ¾16*16µÄºº×Ö
  * 
- * 
  */
 public class LedBitmap16_16
 {

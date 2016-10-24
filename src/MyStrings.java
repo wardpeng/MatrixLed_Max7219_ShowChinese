@@ -277,7 +277,7 @@ class EnglishString
 /**
  * 获取指定汉字的字模数据16*16点阵，一个汉字对应31个字节
  * 
- * @author pengxiangqi
+ * @author
  *
  */
 class ChineseString
@@ -296,7 +296,7 @@ class ChineseString
 		setStrings(chineseStrs);
 	}
 
-	/*
+	/**
 	 * 无参构造函数
 	 * 
 	 */
