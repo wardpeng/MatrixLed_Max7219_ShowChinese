@@ -1,5 +1,5 @@
 # MatrixLed_Max7219_ShowChinese
-感谢sharetop《树莓派研究:用Java实现Max7219 LED点阵的输出》。
+感谢sharetop《树莓派研究:用Java实现Max7219 LED点阵的输出》，他的Git项目地址https://github.com/sharetop/max7219-java。
 在这篇文章实现了8*8的assic字符显示，修改了部分代码，添加了16*16大小的常见汉字（可以选择使用多个字库，都在项目里）任意字符滚动显示。
 
 打算结合我的其他文章，做个天气预报屏玩玩的。
